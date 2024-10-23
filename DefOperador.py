@@ -10,3 +10,4 @@ def Operador()
    if Opciones=="1":
 
    if Opciones=="2":
+   #algo para que vuelva al menu

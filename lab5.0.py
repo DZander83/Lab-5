@@ -19,3 +19,5 @@ elif user == 2:
         input("introduzca una fecha:")
     
     
+#leer el json con la de python
+#modificarlo manual

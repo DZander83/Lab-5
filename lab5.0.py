@@ -3,6 +3,7 @@ print("Elija su tipo de usuario o si desea salir del sistema: ","\n", "1. usuari
 user=input()
 
 if user == 1:
+   cyj.def cargar_usuarios(ruta_archivocsv)
    cyj.
     user=# funcion que verifique si se es admin u operador
 

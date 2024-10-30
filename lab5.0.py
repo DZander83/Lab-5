@@ -3,8 +3,6 @@ import DefOperador as DefO
 import DefAdministrador as DefA
 ruta_archivocsvest = 'estaciones.csv'
 ruta_archivocsv = 'usuarios.csv' 
-ruta_archivojson = 'registros.json' 
-ruta_archivojsonvar = 'variables.json'
 print("Elija su tipo de usuario o si desea salir del sistema: ","\n", "1. usuario registrado.","\n", "2. usuario visitante.","\n", "3. salir." )
 user=input()
 

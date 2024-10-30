@@ -8,7 +8,15 @@ def cargar_usuarios(ruta_archivocsv):
         for fila in lector_csv:
             usuarios.append(fila)
     return usuarios
-
+    
+def cargar_estaciones(ruta_archivocsvest):
+    estaciones = []
+    with open(ruta_archivocsvest, mode='r') as archivo_csv:
+        lector_csv=archivo_csv.read()
+        for fila in lector_csv:
+            estaciones.append(fila)
+    return estaciones
+    
 def verificar_login(codigo, clave, usuarios):
     for usuario in usuarios:
         if usuario['codigo'] == codigo and usuario['clave'] == clave:
@@ -22,7 +30,7 @@ def verificar_login(codigo, clave, usuarios):
             
             
     return False
-
+ruta_archivocsvest = 'estaciones.csv'
 ruta_archivocsv = 'usuarios.csv' 
 ruta_archivojson = 'registros.json' 
 

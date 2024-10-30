@@ -14,8 +14,10 @@ def verificar_login(codigo, clave, usuarios):
         if usuario['codigo'] == codigo and usuario['clave'] == clave:
             if usuario['rol']==Administrador:
                 seluser=0
+                return seluser
             if usuario['rol']==Operador:
                 seluser=1
+                return seluser
             return True
             
             

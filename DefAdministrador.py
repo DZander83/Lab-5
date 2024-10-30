@@ -4,7 +4,6 @@ Created on Wed Oct 16 12:17:16 2024
 
 @author: dandr
 """
-import csv y json as cyj
 def Admin()
 print("1: para gestionar estaciones.","\n", " 2: para gestionar usuarios.","\n", " 3. para volver al menu")
 Opciones=input()

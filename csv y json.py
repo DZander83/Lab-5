@@ -33,6 +33,7 @@ def verificar_login(codigo, clave, usuarios):
 ruta_archivocsvest = 'estaciones.csv'
 ruta_archivocsv = 'usuarios.csv' 
 ruta_archivojson = 'registros.json' 
+ruta_archivojsonvar = 'variables.json'
 
 usuarios = cargar_usuarios(ruta_archivocsv)
 
@@ -45,3 +46,9 @@ def cargar_datos_json():    #hasta el momento solo abre el json, ver o modificar
     with open("registros.json", mode='r') as archivo_json:
         datos_clima = json.load(archivo_json)
     return datos_clima
+
+def cargar_datos_variables(): 
+    clima_variables = []
+    with open("variables.json", mode='r') as variables_json:
+        clima_variables = json.load(variables_json)
+    return clima_variables

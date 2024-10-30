@@ -3,9 +3,10 @@ print("Elija su tipo de usuario o si desea salir del sistema: ","\n", "1. usuari
 user=input()
 
 if user == 1:
-   cyj.def cargar_usuarios(ruta_archivocsv)
-   cyj.def verificar_login(codigo, clave, usuarios)
-    user=# funcion que verifique si se es admin u operador
+   cyj.cargar_usuarios(ruta_archivocsv)
+   cyj.verificar_login(codigo, clave, usuarios)
+   if 
+   
 
 elif user == 2:
     print("Elija el tiempo en el que desea visualizar las estadisticas:", "\n", "1. Ultimos 7 dias.","\n", "2. Ultimos 30 dias.","\n", "3. Elegir manualmente")

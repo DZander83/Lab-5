@@ -32,7 +32,7 @@ codigo_ingresado = input("Ingrese su documento: ")
 clave_ingresada = input("Ingrese su clave: ")
 resultado = verificar_login(codigo_ingresado, clave_ingresada, usuarios)
 
-def cargar_datos_json():
+def cargar_datos_json():    #hasta el momento solo abre el json, ver o modificar la informacion se tiene que hacer con otra funcion
     datos_clima = []
     with open("registros.json", mode='r') as archivo_json:
         datos_clima = json.load(archivo_json)

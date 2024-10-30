@@ -8,9 +8,11 @@ if user == 1:
    cyj.cargar_usuarios(ruta_archivocsv)
    cyj.verificar_login(codigo, clave, usuarios)
    if seluser==1:
-      DefA.
+      DefA.Administrador()
+      
    if seluser==1:
-      DefA.
+      DefO.Operador()
+      
    
 
 elif user == 2:
@@ -24,5 +26,4 @@ elif user == 2:
         input("introduzca una fecha:")
     
     
-#leer el json con la de python
 #modificarlo manual

@@ -10,8 +10,8 @@ if user == 1:
    usuarios = cyj.cargar_usuarios(ruta_archivocsv)
    codigo_ingresado = input("Ingrese su documento: ")
    clave_ingresada = input("Ingrese su clave: ")
-   resultado = cyj.verificar_login(codigo_ingresado, clave_ingresada, usuarios)
    cyj.verificar_login(codigo, clave, usuarios)
+    resultado = cyj.verificar_login(codigo_ingresado, clave_ingresada, usuarios)
    if seluser==1:
       DefA.Administrador()
       

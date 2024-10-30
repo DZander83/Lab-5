@@ -7,11 +7,10 @@ print("Elija su tipo de usuario o si desea salir del sistema: ","\n", "1. usuari
 user=input()
 
 if user == 1:
-   usuarios = cargar_usuarios(ruta_archivocsv)
+   usuarios = cyj.cargar_usuarios(ruta_archivocsv)
    codigo_ingresado = input("Ingrese su documento: ")
    clave_ingresada = input("Ingrese su clave: ")
-   resultado = verificar_login(codigo_ingresado, clave_ingresada, usuarios)
-   cyj.cargar_usuarios(ruta_archivocsv)
+   resultado = cyj.verificar_login(codigo_ingresado, clave_ingresada, usuarios)
    cyj.verificar_login(codigo, clave, usuarios)
    if seluser==1:
       DefA.Administrador()

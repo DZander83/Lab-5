@@ -12,7 +12,13 @@ def cargar_usuarios(ruta_archivocsv):
 def verificar_login(codigo, clave, usuarios):
     for usuario in usuarios:
         if usuario['codigo'] == codigo and usuario['clave'] == clave:
+            if usuario['rol']==Administrador:
+                seluser=0
+            if usuario['rol']==Operador:
+                seluser=1
             return True
+            
+            
     return False
 
 ruta_archivocsv = 'usuarios.csv' 

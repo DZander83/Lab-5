@@ -4,7 +4,7 @@ import json
 def cargar_usuarios(ruta_archivocsv):
     usuarios = []
     with open(ruta_archivocsv, mode='r') as archivo_csv:
-        lector_csv = csv.DictReader(archivo_csv)
+        lector_csv=archivo_csv.read()
         for fila in lector_csv:
             usuarios.append(fila)
     return usuarios
@@ -23,14 +23,9 @@ usuarios = cargar_usuarios(ruta_archivocsv)
 codigo_ingresado = input("Ingrese su documento: ")
 clave_ingresada = input("Ingrese su clave: ")
 resultado = verificar_login(codigo_ingresado, clave_ingresada, usuarios)
-print(resultado) 
 
 def cargar_datos_json():
     datos_clima = []
     with open("registros.json", mode='r') as archivo_json:
-        lector_json = json.load(archivo_json)
-        for fila in lector_json:
-            datos_clima.append(fila)
+        datos_clima = json.load(archivo_json)
     return datos_clima
-
-print(cargar_datos_json())

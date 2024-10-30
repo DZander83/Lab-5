@@ -1,11 +1,9 @@
+import csv y json as cyj
 print("Elija su tipo de usuario o si desea salir del sistema: ","\n", "1. usuario registrado.","\n", "2. usuario visitante.","\n", "3. salir." )
 user=input()
 
 if user == 1:
-    print("Ingrese su nombre y documento:")
-    name=input("Nombre: ")
-    document=input("Documento: ")
-    #funcion que verifique los requsitos de documento y contraseña
+   cyj.
     user=# funcion que verifique si se es admin u operador
 
 elif user == 2:

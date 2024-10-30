@@ -4,7 +4,7 @@ user=input()
 
 if user == 1:
    cyj.def cargar_usuarios(ruta_archivocsv)
-   cyj.
+   cyj.def verificar_login(codigo, clave, usuarios)
     user=# funcion que verifique si se es admin u operador
 
 elif user == 2:

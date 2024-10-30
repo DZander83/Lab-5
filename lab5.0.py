@@ -1,11 +1,16 @@
 import csv y json as cyj
+import DefOperador as DefO
+import DefAdministrador as DefA
 print("Elija su tipo de usuario o si desea salir del sistema: ","\n", "1. usuario registrado.","\n", "2. usuario visitante.","\n", "3. salir." )
 user=input()
 
 if user == 1:
    cyj.cargar_usuarios(ruta_archivocsv)
    cyj.verificar_login(codigo, clave, usuarios)
-   if 
+   if seluser==1:
+      DefA.
+   if seluser==1:
+      DefA.
    
 
 elif user == 2:

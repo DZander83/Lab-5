@@ -32,8 +32,6 @@ def verificar_login(codigo, clave, usuarios):
     return False
 ruta_archivocsvest = 'estaciones.csv'
 ruta_archivocsv = 'usuarios.csv' 
-ruta_archivojson = 'registros.json' 
-ruta_archivojsonvar = 'variables.json'
 
 usuarios = cargar_usuarios(ruta_archivocsv)
 

@@ -1,6 +1,6 @@
 import csv
 import json
-
+#no se puede usar libreria CSV, leer como archivo de texto
 def cargar_usuarios(ruta_archivocsv):
     usuarios = []
     with open(ruta_archivocsv, mode='r') as archivo_csv:

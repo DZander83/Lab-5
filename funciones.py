@@ -2,10 +2,6 @@ import csv
 import json
 from datetime import datetime
 
-# ------------------------------
-# Lectura y escritura en CSV sin métodos adicionales
-# ------------------------------
-
 # Función para leer usuarios desde usuarios.csv
 def leer_usuarios():
     ruta_usuarios = "usuarios.csv"
@@ -73,8 +69,6 @@ def eliminar_usuario(identificacion):
     guardar_usuarios(usuarios)
 
 # ------------------------------
-# Lectura y escritura en JSON sin métodos adicionales
-# ------------------------------
 
 # Función para leer variables desde variables.json
 def leer_variables():
@@ -104,8 +98,6 @@ def guardar_registros(registros):
     with open(ruta_registros, 'w', encoding='utf-8') as archivo:
         archivo.write(json.dumps(registros, indent=4))
 
-# ------------------------------
-# Funciones de manejo de medidas
 # ------------------------------
 
 # Función para añadir una medida a registros.json
@@ -140,8 +132,6 @@ def eliminar_medida(codigo_estacion, variable, fecha):
     guardar_registros(registros)
 
 # ------------------------------
-# Verificación de credenciales sin métodos adicionales
-# ------------------------------
 
 # Función para verificar usuario y obtener rol sin métodos adicionales
 def verificar_credenciales(documento, clave):
@@ -162,8 +152,8 @@ def verificar_credenciales(documento, clave):
                 
     return None
 # ------------------------------
+
 # Validaciones
-# ------------------------------
 
 def validar_nombre(nombre):
     for c in nombre:
@@ -191,9 +181,6 @@ def validar_contraseña():
         return None
 
 # ------------------------------
-# Visualización de datos
-# ------------------------------
-
 # Función para imprimir una tabla
 def imprimir_tabla(tabla, ancho, encabezado=None):
     def dividir_fila(ancho, sep='-'):

@@ -4,7 +4,9 @@ import json
 def cargar_usuarios(ruta_archivocsv):
     usuarios = []
     with open(ruta_archivocsv, mode='r') as archivo_csv:
-        lector_csv=archivo_csv.read()
+        for line in archivo:
+            words = line.strip().split(",") 
+            usuarios.append((words[0], words[1:]))
         for fila in lector_csv:
             usuarios.append(fila)
     return usuarios

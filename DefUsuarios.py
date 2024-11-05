@@ -15,3 +15,11 @@ if Opciones=="2":
    GestionUsuarios=input()
 if Opciones=="3":
    #algo para que vuelva al menu
+  
+   
+def Operador()
+print("1: para seleccionar una estacion.","\n", " 2. para volver al menu")
+Opciones=input()
+if Opciones=="1":
+
+elif Opciones=="2":

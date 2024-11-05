@@ -13,7 +13,7 @@ if user == 1:
    clave_ingresada = input("Ingrese su clave: ")
    cyj.verificar_login(codigo, clave, usuarios)
     resultado = cyj.verificar_login(codigo_ingresado, clave_ingresada, usuarios)
-   if seluser==1:
+   if seluser==0:
       DefA.Administrador()
       
    if seluser==1:

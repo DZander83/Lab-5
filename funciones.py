@@ -34,7 +34,7 @@ def leer_usuarios():
 def guardar_usuarios(usuarios):
     ruta_usuarios = "usuarios.csv"
     with open(ruta_usuarios, 'w', encoding='utf-8', newline='') as archivo:
-        escritor_csv = csv.writer(archivo)
+        escritor_csv = csv.read(archivo)
         encabezado = ['codigo', 'nombre', 'clave', 'rol']
         escritor_csv.writerow(encabezado)
         for usuario in usuarios:

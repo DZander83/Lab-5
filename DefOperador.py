@@ -9,5 +9,5 @@ def Operador()
    Opciones=input()
    if Opciones=="1":
 
-   if Opciones=="2":
+   elif Opciones=="2":
    #algo para que vuelva al menu

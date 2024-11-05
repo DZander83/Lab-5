@@ -1,41 +1,58 @@
-# -*- coding: utf-8 -*-
-from datetime import datetime
 
 def validar_nombre(nombre):
-    '''
-    Valida nombre válido (solo letras y espacios)
-    Argumentos:
-        nombre: String a validar
-    return -> Boolean (True or False) si es valido o no
-    '''
-    pass
+   
+    for caracter in nombre:
+       
+        if not (caracter.isalpha() or caracter.isspace()):
+            return False
+    
+    return True
+
 
 def validar_documento(documento):
-    '''
-    Valida un número de documento. Debe contener 10 caracteres, todos numéricos.
     
-    Argumentos:
-        documento: string a validar
-    return -> Boolean (True or False) si es valido o no
-    '''
-    pass
+    return len(documento) == 10 and documento.isdigit()
+    
 
 def validar_fecha(fecha):
-    '''
-    Valida que un string corresponda a una fecha válida (con formato yyyy-mm-dd).
     
-    Argumentos:
-        fecha -> string a validar
-    return -> Boolean (True or False) si es valido o no
-    '''
-    pass
+    if len(fecha) != 10:
+        return False
+    if fecha[4] != '-' or fecha[7] != '-':
+        return False
+
+    año_str= fecha[:4] 
+    mes_str= fecha[5:7]
+    dia_str= fecha[8:]
+    
+    if not (año_str.isdigit() and mes_str.isdigit() and dia_str.isdigit()):
+        return False
+
+    año = int(año_str)
+    mes = int(mes_str)
+    dia = int(dia_str)
+    
+    if mes < 1 or mes > 12:
+        return False
+
+    dias_por_mes = {
+        1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30,
+        7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+    }
+
+    
+    if (año % 4 == 0 and (año % 100 != 0 or año % 400 == 0)) and mes == 2:
+        dias_por_mes[2] = 29
+
+    if dia < 1 or dia > dias_por_mes[mes]:
+        return False
+
+    return True
+
 
 def limpiar_pantalla():
-    '''
-    Imprime varias líneas en blanco, para dar la ilusión 
-    de limpiar la pantalla
-    '''
-    print('\n'*20)
+    
+    return print('\n'*20)
 
 def imprimir_tabla(tabla, ancho, encabezado=None):  
     ''' 

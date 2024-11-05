@@ -189,7 +189,4 @@ def iniciar_programa():
             break
         else:
             print("Opción inválida. Intente nuevamente.")
-
-# Ejecutar el programa principal
-if _name_ == "_main_":
-    iniciar_programa()
+iniciar_programa()

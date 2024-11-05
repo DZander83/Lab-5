@@ -1,6 +1,5 @@
 import csv y json as cyj
-import DefOperador as DefO
-import DefAdministrador as DefA
+import DefUsuarios as DefU
 import utilidades.py as ut
 ruta_archivocsvest = 'estaciones.csv'
 ruta_archivocsv = 'usuarios.csv' 
@@ -14,10 +13,10 @@ if user == 1:
    cyj.verificar_login(codigo, clave, usuarios)
     resultado = cyj.verificar_login(codigo_ingresado, clave_ingresada, usuarios)
    if seluser==0:
-      DefA.Administrador()
+      DefU.Administrador()
       
    if seluser==1:
-      DefO.Operador()
+      DefU.Operador()
       
    
 

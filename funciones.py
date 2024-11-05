@@ -11,7 +11,7 @@ def leer_usuarios():
     ruta_usuarios = "usuarios.csv"
     usuarios = []
     with open(ruta_usuarios, 'r', encoding='utf-8') as archivo:
-        lector_csv = csv.reader(archivo)
+        lector_csv = csv.read(archivo)
         encabezado = None
         fila_numero = 0
         for fila in lector_csv:

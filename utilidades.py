@@ -7,13 +7,11 @@ def validar_nombre(nombre):
             return False
     
     return True
-
-
+   
 def validar_documento(documento):
     
     return len(documento) == 10 and documento.isdigit()
     
-
 def validar_fecha(fecha):
     
     if len(fecha) != 10:

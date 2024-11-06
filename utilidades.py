@@ -53,15 +53,24 @@ def limpiar_pantalla():
     return print('\n'*20)
 
 def imprimir_tabla(tabla, ancho, encabezado=None):  
-    ''' 
-    Imprime en pantalla un tabla con los datos pasados, ajustado a los tamaños deseados.
-    
-    Argumentos:
-        tabla: Lista que representa la tabla. Cada elemento es una fila
-        ancho: Lista con el tamaño deseado para cada columna. Si se especifica
-            un entero, todas las columnas quedan de ese tamaño
-        encabezado: Lista con el encabezado de la tabla
-    '''
+   if encabezado:
+    for columna in encabezado:
+        # Agregar espacios manualmente
+        texto = str(columna)
+        espacios = " " * (ancho - len(texto))
+        print(texto + espacios, end=' ')
+    print()
+    # Imprimir línea separadora
+    print("-" * (ancho + 1) * len(encabezado))
+
+# Imprimir filas
+ for fila in tabla:
+    for elemento in fila:
+        # Agregar espacios manualmente
+        texto = str(elemento)
+        espacios = " " * (ancho - len(texto))
+        print(texto + espacios, end=' ')
+    print()
     def dividir_fila(ancho,sep='-'):
         '''
         ancho: Lista con el tamaño de cada columna
